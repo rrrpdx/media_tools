@@ -29,6 +29,10 @@ show_media --size <size> --recursive --first <file> --db <db> {files}
 ### Syncing with Google Sheets
 This script allows you to store rating and keyword metadata in Google Sheets. You will need to create a credentials file as described here: https://pygsheets.readthedocs.io/en/stable/authorization.html. This file should be saved in `$HOME/.google/credentials.json`.
 
+Currently, it is assumed that you have a Google Sheet already created that contains the following columns in Row 1:
+`filename, hash, size, directory, rating, keywords`
+The filenames should be unique as well as the hashes. Filenames, rating, and keywords are currently used. Other fields are for future use. If a file being displayed exists in the sheet, you will be able to modify its rating or keywords. Ratings can be from -1 to 10. They are displayed with half as many stars (so a rating of 10 is 5 stars, 5 is 2.5 stars, etc).
+
 ### Media Navigation
 | Key | Action | 
 |-----|--------|
