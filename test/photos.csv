@@ -1,0 +1,13 @@
+filename,rating,keywords
+01_mercury.jpg,10,"#planet #mercury"
+02_venus.jpg,9,"#planet #venus"
+03_earth.jpg,8,"#planet #earth"
+04_mars.jpg,7,"#planet #mars"
+05_jupiter.jpg,6,"#planet #jupiter"
+06_saturn.jpg,5,"#planet #saturn"
+07_uranus.jpg,4,"#planet #uranus"
+08_neptune.jpg,3,"#planet #neptune"
+09_pluto.jpg,2,"#notaplanet #pluto"
+10_sample.mov,1,""
+11_sample.mp4,0,""
+12_sample.heic,-1,"#notaplanet"
