@@ -175,10 +175,9 @@ class App:
 
     def __setVideo(self, filename) -> None:
         self.__setvideoframe()
-        file_abs_path = "file://%s" % Path(filename).absolute()
+        file_abs_path = Path(filename).absolute().as_uri()
         if self.video_player is None:
-            self.video_player = Gst.ElementFactory.make("playbin", None)
-            self.video_player.set_property("uri", file_abs_path)
+            self.video_player=Gst.parse_launch('playbin uri='+file_abs_path+' video-sink= "videoflip method=automatic ! autovideosink"')
             self.video_player.set_state(Gst.State.PLAYING)
             self.bus = self.video_player.get_bus()
             self.bus.enable_sync_message_emission()
